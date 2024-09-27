@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="adoptionSection">
+        <button type="button" id="adoptionBtn">Send Pet to Adoption</button>
+    </div>
+
+    <div class="petForm">
+        <form action="/submit-pet" method="GET">
+            <label for="petName">Pet Name:</label>
+            <input type="text" id="petName" name="petName" placeholder="Name your pet!" required>
+            <button type="submit" id="createBtn">Adopt Pet</button>
+        </form>
+    </div>
+
+    <div id="petMain">
+        <div id="greetingContainer">
+            <h1 id="greeting">Welcome back! Your pet misses you!</h1>
+            <p id="time">Today is DATE</p>      
+        </div>
+    
+        <div class="statsContainer">
+            <h2 id="fullness">Hunger:0</h2>
+            <h2 id="mood">Mood</h2>
+            <h2 id="age">Age:0</h2>
+        </div>
+        <div class="actionContainer">
+        <button type="button" id="feedBtn">Feed</button>        
+        <button type="button" id="petBtn">Pet</button>  
+        </div>
+    </div>
+
+
+
+</body>
+</html>
