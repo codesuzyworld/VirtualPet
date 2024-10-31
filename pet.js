@@ -151,9 +151,6 @@ function loadHandle() {
     createBtn.addEventListener('click', function(event) {
         event.preventDefault();
 
-
-
-
         // Get the name of the pet from the form
         const petName = document.querySelector('#petName').value;
         const petNameInput = document.querySelector('#petName');
