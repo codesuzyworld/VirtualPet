@@ -1,0 +1,239 @@
+body {
+    background: #FBE9E9;
+    color: #382a2a;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Form */
+.petForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 50px 80px 50px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* Label styling */
+.form-group label {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+.form-group input[type="text"] {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.form-group button {
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ee7469;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #f29562;
+}
+
+/* Adoption Button */
+#adoptionSection {
+    align-items: center;
+}
+
+#adoptionSection button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ee7469;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#adoptionSection button:hover {
+    background-color: #f29562;
+}
+
+
+
+/* Pet Main Page */
+#petMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+#greetingContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 5px;
+}
+
+#greeting{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    color: #3e2020;
+    margin:0;
+}
+#time{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: #816e6e;
+    margin:0;
+}
+
+/* Game Container */
+.gameContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+/* Pet Container */
+.petContainer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+/* Images within petContainer */
+.petContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+/* Stats and Actions Container */
+.statsactionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Stats Container */
+.statsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Action Container */
+.actionContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px; 
+}
+
+/* Button styling within action container */
+#feedBtn{
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3eade9;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    flex: 1; 
+}
+
+#petBtn{
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #94B688;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    flex: 1; 
+}
+
+
+#feedBtn:hover {
+    background-color: #2494d0;
+}
+
+#petBtn:hover {
+    background-color: #648658;
+}

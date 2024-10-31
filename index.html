@@ -6,19 +6,28 @@
     <title>Document</title>
     <script src="pet.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+        
+
 </head>
 <body>
-    <div id="adoptionSection">
-        <button type="button" id="adoptionBtn">Send Pet to Adoption</button>
-    </div>
 
     <div class="petForm">
-        <form action="/submit-pet" method="GET">
-            <label for="petName">Pet Name:</label>
-            <input type="text" id="petName" name="petName" placeholder="Name your pet!" required>
-            <button type="submit" id="createBtn">Adopt Pet</button>
+        <form action="/submit-pet" method="GET" class="form-container">
+            <h2>Welcome to the Adoption Center!</h2>
+            <div class="form-group">
+                <label for="petName">Name your pet</label>
+                <input type="text" id="petName" name="petName" placeholder="Cookie Wong" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="createBtn">Adopt Pet</button>
+            </div>
         </form>
     </div>
+    
 
     <div id="petMain">
         <div id="greetingContainer">
@@ -26,15 +35,29 @@
             <p id="time">Today is DATE</p>      
         </div>
     
-        <div class="statsContainer">
-            <h2 id="fullness">Hunger:0</h2>
-            <h2 id="mood">Mood</h2>
-            <h2 id="age">Age:0</h2>
+    <div class="gameContainer">
+        <div class="petContainer">
+            <img id="hungerImage" src="" alt="Hunger Status">
+            <img id="moodImage" src="" alt="Mood Status">
         </div>
-        <div class="actionContainer">
-        <button type="button" id="feedBtn">Feed</button>        
-        <button type="button" id="petBtn">Pet</button>  
+        
+        <div class="statsactionContainer">
+            <div class="statsContainer">
+                <h2 id="fullness">Hunger:0</h2>
+                <h2 id="mood">Mood</h2>
+                <h2 id="age">Age:0</h2>
+            </div>
+            <div class="actionContainer">
+                <button type="button" id="feedBtn">Feed</button>        
+                <button type="button" id="petBtn">Pet</button>  
+            </div>            
         </div>
+
+
+    </div>
+
+    <div id="adoptionSection">
+        <button type="button" id="adoptionBtn">Send Pet to Adoption</button>
     </div>
 
 
