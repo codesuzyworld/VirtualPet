@@ -150,8 +150,23 @@ function loadHandle() {
     // Event Handler: Adopt Pet
     createBtn.addEventListener('click', function(event) {
         event.preventDefault();
+
+
+
+
         // Get the name of the pet from the form
         const petName = document.querySelector('#petName').value;
+        const petNameInput = document.querySelector('#petName');
+
+        // Check if the pet name is empty
+        if (!petName) {
+            petNameInput.style.background = "#D84C43";
+            return; 
+        }
+
+        // Remove the red border if the input is valid
+        petNameInput.style.background = ""; 
+
         // Set default values of the pet
         pet.name = petName;
         pet.fullness = 100;
