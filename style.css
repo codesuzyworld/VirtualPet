@@ -165,7 +165,7 @@ body {
     height: 500px;
 }
 
-/* Images within petContainer */
+/* Pet Portrait */
 .petContainer img {
     position: absolute;
     top: 0;
@@ -237,6 +237,7 @@ body {
     background-color: #648658;
 }
 
+/* Better styling for mobile */
 @media (max-width: 768px) {
     .gameContainer {
         flex-direction: column;

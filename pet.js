@@ -63,6 +63,7 @@ function loadHandle() {
             console.log("Stats displayed");
         }, 1000);
     }
+
     //Portrait Update
     function updatePortrait() {
         // Update hunger image based on hunger level
@@ -94,6 +95,16 @@ function loadHandle() {
         const month = months[date.getMonth()]; 
         const year = date.getFullYear();
         timeDisplay.innerHTML = `Today is ${dayOfWeek} ${month} ${day}, ${year}`;
+
+        //If a pet exists, then display the pet's birthday!
+        if (pet && pet.name) {
+            let birthdayDate = new Date(pet.birthday);
+            const birthdayDayOfWeek = weekdays[birthdayDate.getDay()];
+            const birthdayDay = birthdayDate.getDate();
+            const birthdayMonth = months[birthdayDate.getMonth()];
+            const birthdayYear = birthdayDate.getFullYear();
+            document.querySelector("#birthday").innerHTML = `Birthday: ${birthdayMonth} ${birthdayDay}, ${birthdayYear}`;
+        }
     }
 
     // This function displays the stats of the pet
@@ -122,17 +133,28 @@ function loadHandle() {
         displayStats();
     }
 
-    // This function updates the stats every 12 hours
-    function petStatUpdate(){
-        if (!pet.name) return; // Stop if no pet exists
-        let currentTime = Date.now();
-        let timePassed = (currentTime - pet.lastUpdated) / 1000;    
-        // Decrease fullness and mood based on time passed
-        let intervalsPassed = Math.floor(timePassed / 10); 
-        pet.fullness = Math.max(0, pet.fullness - intervalsPassed * 33);
-        pet.mood = Math.max(0, pet.mood - intervalsPassed * 20);
-        saveStats();
+    function petStatUpdate() {
+        
+        // Stop if no pet exists
+        if (!pet.name) return;
+        // Get the current time in milliseconds
+        let currentTime = Date.now(); 
+         // Calculate how much time has passed in seconds
+        let timePassed = (currentTime - pet.lastUpdated) / 1000;
+    
+        // Calculate how many 8 hour intervals have passed
+        let intervalsPassed = Math.floor(timePassed / (8 * 60 * 60)); 
+    
+        // Decrease the pet's fullness and mood based on the number of intervals passed
 
+        // Decrease fullness by 33 for each interval
+        pet.fullness = Math.max(0, pet.fullness - intervalsPassed * 20); 
+
+        // Decrease mood by 20 for each interval
+        pet.mood = Math.max(0, pet.mood - intervalsPassed * 15); 
+    
+         // Save the updated pet stats to local storage
+        saveStats();
     }
 
     function ageUpdate(){
@@ -166,8 +188,8 @@ function loadHandle() {
 
         // Set default values of the pet
         pet.name = petName;
-        pet.fullness = 100;
-        pet.mood = 100;
+        pet.fullness = 50;
+        pet.mood = 50;
         pet.age = 0;
         pet.birthday = Date.now();
         saveStats();
